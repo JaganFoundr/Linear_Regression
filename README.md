@@ -7,7 +7,7 @@
        - Data Augmentation
        - Data Normalization
        - Batch Normalization
-       - REsidual COnnections
+       - Residual COnnections
        - Learning Rate Annealing
        - Weight Decay
        - Gradient Clipping
