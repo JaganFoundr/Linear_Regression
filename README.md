@@ -11,3 +11,4 @@
        - Learning Rate Annealing
        - Weight Decay
        - Gradient Clipping
+### 6. GENERATIVE ADVERSERIAL NEURAL NETWORKS
