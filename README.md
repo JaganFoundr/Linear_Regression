@@ -128,6 +128,8 @@ This project is licensed under the **MIT License**—do whatever inspires you wi
 
 ## 🌟 **Acknowledgments**
 
+![Image](OUTPUT.png)
+
 Special thanks to:  
 - PyTorch Devs for their incredible tools!  
 - The **open-source community** for inspiring us to share our work!  
