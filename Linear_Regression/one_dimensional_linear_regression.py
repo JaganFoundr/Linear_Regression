@@ -1,65 +1,86 @@
-#importing all the important libraries
+# ----------------------------------------------
+# IMPORTING LIBRARIES
+# ----------------------------------------------
 import torch
 import numpy as np
 
-#inputs (temperature, rainfall, humidity)
-inputs=np.array([[73,67,45],
-                 [91,88,64],
-                 [87,134,58],
-                 [102,43,37],
-                 [69,96,70]],dtype='float32')
+# ----------------------------------------------
+# DATA PREPARATION
+# ----------------------------------------------
 
-#targets (apples, oranges)
-targets=np.array([[56,70],
-                 [81,101],
-                 [119,133],
-                 [22,37],
-                 [103,119]],dtype='float32')
+# Inputs (features: temperature, rainfall, humidity)
+inputs = np.array([[73, 67, 45],
+                   [91, 88, 64],
+                   [87, 134, 58],
+                   [102, 43, 37],
+                   [69, 96, 70]], dtype='float32')
 
-#converting inputs and targets from numpy format to tensor format
-inputs=torch.from_numpy(inputs)
-targets=torch.from_numpy(targets)
+# Targets (outputs: apples, oranges)
+targets = np.array([[56, 70],
+                    [81, 101],
+                    [119, 133],
+                    [22, 37],
+                    [103, 119]], dtype='float32')
 
-# defining random weights and biases
-weights=torch.randn(2,3,requires_grad=True)
-bias=torch.randn(2,requires_grad=True)
+# Convert inputs and targets to PyTorch tensors
+inputs = torch.from_numpy(inputs)
+targets = torch.from_numpy(targets)
 
-#function for the prediction equation for the model
+# ----------------------------------------------
+# INITIALIZING MODEL PARAMETERS
+# ----------------------------------------------
+
+# Randomly initialize weights and biases
+weights = torch.randn(2, 3, requires_grad=True)
+bias = torch.randn(2, requires_grad=True)
+
+# ----------------------------------------------
+# MODEL AND LOSS FUNCTION
+# ----------------------------------------------
+
+# Define the linear regression model
 def model(x):
-  return x @ weights.t()+bias
+    return x @ weights.t() + bias
 
-#function for the loss
-def mse(x,y):
-  diff=x-y
-  return torch.sum(diff*diff)/diff.numel()
+# Define the Mean Squared Error (MSE) loss function
+def mse(x, y):
+    diff = x - y
+    return torch.sum(diff * diff) / diff.numel()
 
-#training loop with 1000 epochs
-for i in range(1000):
+# ----------------------------------------------
+# TRAINING THE MODEL
+# ----------------------------------------------
 
-  #predicting using the inputs
-  prediction=model(inputs)
+# Training loop: 1000 epochs
+for epoch in range(1000):
+    # Forward pass: predict using the model
+    prediction = model(inputs)
 
-  # checking the loss of the prediction
-  loss=mse(prediction, targets)
-  print(loss)
+    # Calculate the loss
+    loss = mse(prediction, targets)
 
-  # backpropogating to compute gradients and update the weights
-  loss.backward()
+    # Print loss every 100 epochs
+    if (epoch + 1) % 100 == 0:
+        print(f"Epoch [{epoch + 1}/1000], Loss: {loss.item():.4f}")
 
-  #updating the weights without tracking the gradient
-  with torch.no_grad():
+    # Backward pass: compute gradients
+    loss.backward()
 
-    #learning rate value
-    lr=0.00001
+    # Update weights and biases
+    with torch.no_grad():
+        lr = 0.00001  # Learning rate
 
-    #updating weights
-    weights-=weights.grad*lr
+        # Update weights
+        weights -= weights.grad * lr
 
-    #updating bias
-    bias-=bias.grad*lr
+        # Update bias
+        bias -= bias.grad * lr
 
-    #emptying the gradients of weights and bias
-    weights.grad.zero_()
-    bias.grad.zero_()
+        # Zero the gradients after updating
+        weights.grad.zero_()
+        bias.grad.zero_()
 
-print(loss)
+# ----------------------------------------------
+# FINAL LOSS
+# ----------------------------------------------
+print(f"Final Loss: {loss.item():.4f}")
