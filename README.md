@@ -58,7 +58,7 @@ cd 1D_Linear_Regression
 
 ## **Results**
 After training for 1000 epochs, the model effectively predicts the target values for apples and oranges:
-- **Final Loss**: <0.0002> 
+- **Final Loss**: 0.002
 - Predicted outputs closely match the target outputs.
 
 ---
