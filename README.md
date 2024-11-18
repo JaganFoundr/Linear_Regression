@@ -32,7 +32,7 @@ Make sure your system is ready:
 ### 📂 **Installation**
 1️⃣ Clone the repo:  
 ```bash
-git clone https://github.com/YourUsername/Linear_Regression.git
+git clone https://github.com/JaganFoundr/Linear_Regression.git
 cd Linear_Regression
 ```  
 2️⃣ Explore the individual folders for 1D and Multi-Dimensional LR.
@@ -114,7 +114,7 @@ We’d ❤️ to have you onboard!
 
 ## 🌐 **Connect with Us**
 
-- 💬 **Share your thoughts**: Found this helpful? Let us know on **LinkedIn** or **Twitter**!  
+- 💬 **Share your thoughts**: Found this helpful? Let us know on **LinkedIn**!  
 - ⭐ **Star the repo**: If you love this project, give it a ⭐ on GitHub!  
 - 🛠️ **Build Together**: Share your own implementations with us!  
 
