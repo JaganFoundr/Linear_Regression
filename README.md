@@ -58,7 +58,7 @@ cd 1D_Linear_Regression
 
 ## **Results**
 After training for 1000 epochs, the model effectively predicts the target values for apples and oranges:
-- **Final Loss**: <Insert Value> 
+- **Final Loss**: <0.0002> 
 - Predicted outputs closely match the target outputs.
 
 ---
@@ -89,4 +89,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ---
 
 Let me know if you'd like to tweak this or proceed with other projects! 😊
-### 2. MULTI DIMENSIONAL LINEAR REGRESSION [Repository Name](https://github.com/username/repo-name)
