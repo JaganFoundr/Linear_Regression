@@ -2,6 +2,8 @@
 
 Welcome to **THE** repository for exploring the world of **Linear Regression** with PyTorch! From mastering **One-Dimensional Linear Regression** 🧮 to scaling up with **Multi-Dimensional Linear Regression** 🌐, this repo is your ultimate guide to one of the most fundamental concepts in Machine Learning! 💡
 
+![Image](Screenshot from 2024-11-18 21-13-48.png)
+
 ---
 
 ## 🌟 **Project Highlights**
