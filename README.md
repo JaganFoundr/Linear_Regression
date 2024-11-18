@@ -1,12 +1,8 @@
-# PyTorchNN
-### 1. ONE DIMENSIONAL LINEAR REGRESSION [Repository](https://github.com/JaganFoundr/Linear-Regression)
-![image](https://github.com/user-attachments/assets/5f187b9f-3c73-49e5-8bda-a2faf657b7ab)
-
-### README for 1D Linear Regression Project
-
 ---
 
 # **1D Linear Regression**
+
+![image](https://github.com/user-attachments/assets/5f187b9f-3c73-49e5-8bda-a2faf657b7ab)
 
 Welcome to the **1D Linear Regression** project! 🌟 This repository demonstrates a simple yet powerful machine learning model that predicts target values based on a single-dimensional input dataset. By exploring this project, you'll gain insights into the core workings of linear regression, gradient descent, and model optimization.
 
